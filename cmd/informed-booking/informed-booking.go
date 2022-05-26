@@ -10,10 +10,10 @@ import (
 )
 
 func main() {
-	router := mux.NewRouter()
+    router := mux.NewRouter()
 
     booking.Router(router)
 
-	fmt.Println("Serving informed-booking.api on port 8000")
-	log.Fatal(http.ListenAndServe(":8000", router))
+    fmt.Println("Serving informed-booking.api on port 8000")
+    log.Fatal(http.ListenAndServe(":8000", router))
 }

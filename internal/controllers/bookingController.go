@@ -1,7 +1,7 @@
 package booking
 
 import (
-	"encoding/json"
+	"fmt"
 	"net/http"
 
 	"github.com/gorilla/mux"
@@ -15,17 +15,17 @@ func Router(router *mux.Router) {
 }
 
 func get(w http.ResponseWriter, r *http.Request) {
-	json.NewEncoder(w).Encode("Hello,World")
+	fmt.Println("Get not implemented")
 }
 
 func post(w http.ResponseWriter, r *http.Request) {
-	json.NewEncoder(w).Encode("Hello,World")
+	fmt.Println("Post not implemented")
 }
 
 func put(w http.ResponseWriter, r *http.Request) {
-	json.NewEncoder(w).Encode("Hello,World")
+	fmt.Println("Put not implemented")
 }
 
 func delete(w http.ResponseWriter, r *http.Request) {
-	json.NewEncoder(w).Encode("Hello,World")
+	fmt.Println("Delete not implemented")
 }
