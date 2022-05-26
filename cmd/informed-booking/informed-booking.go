@@ -1,18 +1,19 @@
 package main
 
 import (
-    "github.com/gorilla/mux"
-    "github.com/TheLazyLemur/informed-booking.api/internal"
-    "fmt"
-    "log"
-    "net/http"
+	"fmt"
+	"log"
+	"net/http"
+
+	booking "github.com/TheLazyLemur/informed-booking.api/internal/controllers"
+	"github.com/gorilla/mux"
 )
 
 func main() {
-    router := mux.NewRouter()
+	router := mux.NewRouter()
 
-    router.HandleFunc("/", greeting.Hello).Methods("GET")
+    booking.Router(router)
 
-    fmt.Println("Serving informed-booking.api on port 8000")
-    log.Fatal(http.ListenAndServe(":8000", router))
+	fmt.Println("Serving informed-booking.api on port 8000")
+	log.Fatal(http.ListenAndServe(":8000", router))
 }
